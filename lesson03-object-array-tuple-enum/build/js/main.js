@@ -16,3 +16,14 @@ let mixed = ["A", 45, false];
 mixed = myTuple2;
 // myTuple2 = mixed; //This will not work
 myTuple2[1] = 43;
+// Objects
+let myObj;
+myObj = [];
+console.log(typeof myObj);
+myObj = myTuple2;
+myObj = {};
+const exampleObj = {
+    prop1: "Dave",
+    prop2: true,
+};
+exampleObj.prop1 = "John";
