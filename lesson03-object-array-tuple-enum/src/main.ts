@@ -34,3 +34,42 @@ const exampleObj = {
 };
 
 exampleObj.prop1 = "John";
+
+interface Guitarist {
+  name?: string;
+  active: boolean;
+  albums: (string | number)[];
+}
+
+let evh: Guitarist = {
+  name: "Eddie",
+  active: false,
+  albums: [1984, 5150, "OU812"],
+};
+
+let jp: Guitarist = {
+  active: true,
+  albums: ["I", "II", "IV"],
+};
+
+const greetGuitarist = (guitarist: Guitarist) => {
+  if (guitarist.name) {
+    return `Hello ${guitarist.name.toUpperCase()}!`;
+  }
+  return "Hello!";
+};
+
+console.log(greetGuitarist(jp));
+
+// Enums
+// "Unlike most TypeScript features, Enums are not a type-level addition to JavaScript but something added to the language and runtime."
+
+enum Grade {
+  U = 1,
+  D,
+  C,
+  B,
+  A,
+}
+
+console.log(Grade.U);
