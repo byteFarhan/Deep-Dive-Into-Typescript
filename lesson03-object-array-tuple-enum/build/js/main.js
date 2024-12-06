@@ -29,7 +29,7 @@ const exampleObj = {
 exampleObj.prop1 = "John";
 let evh = {
     name: "Eddie",
-    active: false,
+    active: true,
     albums: [1984, 5150, "OU812"],
 };
 let jp = {

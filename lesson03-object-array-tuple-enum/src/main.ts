@@ -43,7 +43,8 @@ interface Guitarist {
 
 let evh: Guitarist = {
   name: "Eddie",
-  active: false,
+  active: true,
+
   albums: [1984, 5150, "OU812"],
 };
 
