@@ -40,7 +40,7 @@ const greetGuitarist = (guitarist) => {
     if (guitarist.name) {
         return `Hello ${guitarist.name.toUpperCase()}!`;
     }
-    return "Hello!";
+    return "Hello!!";
 };
 console.log(greetGuitarist(jp));
 // Enums

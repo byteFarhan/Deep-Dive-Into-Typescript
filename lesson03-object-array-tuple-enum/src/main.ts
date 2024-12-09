@@ -57,7 +57,7 @@ const greetGuitarist = (guitarist: Guitarist) => {
   if (guitarist.name) {
     return `Hello ${guitarist.name.toUpperCase()}!`;
   }
-  return "Hello!";
+  return "Hello!!";
 };
 
 console.log(greetGuitarist(jp));
