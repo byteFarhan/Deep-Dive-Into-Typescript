@@ -34,7 +34,7 @@ let evh = {
 };
 let jp = {
     active: true,
-    albums: ["I", "II", "IV"],
+    albums: ["I", "III", "IV"],
 };
 const greetGuitarist = (guitarist) => {
     if (guitarist.name) {
