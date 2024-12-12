@@ -50,7 +50,7 @@ let evh: Guitarist = {
 
 let jp: Guitarist = {
   active: true,
-  albums: ["I", "III", "IV"],
+  albums: ["I", "II", "IV"],
 };
 
 const greetGuitarist = (guitarist: Guitarist) => {
