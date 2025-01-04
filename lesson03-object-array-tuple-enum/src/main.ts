@@ -8,7 +8,8 @@ mixedArr.shift();
 console.log(mixedArr);
 strArr.push("3");
 
-strArr[3] = 4;
+// strArr[3] = 4;
+// this will throw an error because Type 'number' is not assignable to type 'string'.
 console.log(strArr);
 
 // Tuple
@@ -35,10 +36,16 @@ const exampleObj = {
 
 exampleObj.prop1 = "John";
 
+type MyType = {
+  name: string;
+  isActive?: boolean; // (?) this sign make isActive property optional.
+  album: (string | number)[];
+};
+
 interface Guitarist {
   name?: string;
   active: boolean;
-  albums: (string | number)[];
+  albums: (number | string)[];
 }
 
 let evh: Guitarist = {
@@ -53,15 +60,15 @@ let jp: Guitarist = {
   albums: ["I", "II", "IV"],
 };
 
-const greetGuitarist = (guitarist: Guitarist) => {
-  if (guitarist.name) {
-    return `Hello ${guitarist.name.toUpperCase()}!`;
+const greetGuitarist = (obj: Guitarist) => {
+  // return `Hello ${obj.name?.toUpperCase()}`;
+  if (obj.name) {
+    return `Hello ${obj.name.toUpperCase()}!`;
   }
   return "Hello!";
 };
 
 console.log(greetGuitarist(jp));
-
 // Enums
 // "Unlike most TypeScript features, Enums are not a type-level addition to JavaScript but something added to the language and runtime."
 
@@ -74,3 +81,14 @@ enum Grade {
 }
 
 console.log(Grade.U);
+console.log(Grade);
+console.log(Grade["1"]);
+
+enum Test {
+  A = 100,
+  B,
+  C,
+}
+console.log(Test.C);
+
+// console.log(Test?.I); //This will give error.

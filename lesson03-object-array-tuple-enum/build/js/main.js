@@ -7,7 +7,8 @@ mixedArr.unshift("dd");
 mixedArr.shift();
 console.log(mixedArr);
 strArr.push("3");
-strArr[3] = 4;
+// strArr[3] = 4;
+// this will throw an error because Type 'number' is not assignable to type 'string'.
 console.log(strArr);
 // Tuple
 const myTuple = [];
@@ -36,9 +37,10 @@ let jp = {
     active: true,
     albums: ["I", "II", "IV"],
 };
-const greetGuitarist = (guitarist) => {
-    if (guitarist.name) {
-        return `Hello ${guitarist.name.toUpperCase()}!`;
+const greetGuitarist = (obj) => {
+    // return `Hello ${obj.name?.toUpperCase()}`;
+    if (obj.name) {
+        return `Hello ${obj.name.toUpperCase()}!`;
     }
     return "Hello!";
 };
@@ -54,3 +56,13 @@ var Grade;
     Grade[Grade["A"] = 5] = "A";
 })(Grade || (Grade = {}));
 console.log(Grade.U);
+console.log(Grade);
+console.log(Grade["1"]);
+var Test;
+(function (Test) {
+    Test[Test["A"] = 100] = "A";
+    Test[Test["B"] = 101] = "B";
+    Test[Test["C"] = 102] = "C";
+})(Test || (Test = {}));
+console.log(Test.C);
+// console.log(Test?.I); //This will give error.
