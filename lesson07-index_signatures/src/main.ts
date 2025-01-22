@@ -37,7 +37,7 @@ console.log(todaysNet(todaysTransactions));
 
 console.log(todaysTransactions["Dave"]); // undefined but not giving any error. So this does open up the possibility for you to try to access a key on an object that does not exist//
 
-///////// using keyof keyword instade of index signature //////////
+///// using keyof keyword instade of index signature ///////
 interface Student {
   //[key: string]: string | number | number[] | undefined
   name: string;
