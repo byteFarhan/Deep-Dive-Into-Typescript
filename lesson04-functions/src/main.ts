@@ -81,7 +81,7 @@ const infinite = () => {
   let i: number = 1;
   while (true) {
     i++;
-    // if (i > 100) break;
+    // if (i > 100) break; // for stoping endless loop
   }
 };
 
@@ -97,4 +97,15 @@ const numOrStr = (value: number | string): string => {
   if (isNumber(value)) return "number";
   //   if (typeof value === "number") return "number";
   return createError("This should never happen!");
+};
+
+const testFunc = (a: number, b: number): number => {
+  return a + b;
+};
+
+const strOrNum = (value: number | string): string => {
+  if (typeof value === "string") return "string";
+  else if (isNumber(value)) return "number";
+
+  return createError("s");
 };
